@@ -161,7 +161,7 @@ resource "aws_security_group" "lb_sg" {
     from_port        = var.web
     to_port          = var.web
     protocol         = var.lb_protocol
-    cidr_blocks      = [aws_subnet.private_subnet.id]
+    cidr_blocks      = [var.ngw_cidr]
     ipv6_cidr_blocks = [var.ngw_cidr_v6]
   }
 
@@ -170,6 +170,31 @@ resource "aws_security_group" "lb_sg" {
   }
 }
 
+
+resource "aws_security_group" "instance_sg" {
+  name        = var.instance_sg_name
+  description = "Allow TLS inbound traffic"
+  vpc_id      = aws_vpc.main.id
+
+  ingress {
+    description      = "TLS from VPC"
+    from_port        = var.web
+    to_port          = var.web
+    protocol         = var.lb_protocol
+    security_groups = [aws_security_group.lb_sg.id]
+  }
+
+  egress {
+    from_port        = var.web
+    to_port          = var.web
+    protocol         = var.lb_protocol
+    security_groups = [aws_security_group.lb_sg.id]
+  }
+
+  tags = {
+    Name = var.instance_sg_name
+  }
+}
 
 
 resource "aws_lb_target_group" "web_group" {
@@ -199,9 +224,9 @@ resource "aws_lb_listener" "lb_listener" {
 }
 
 
-# resource "aws_lb_target_group_attachment" "project_lb_tg_attachment" {
-#   target_group_arn = aws_lb_target_group.web_group.arn
-#   target_id        = var.target_id
-#   port             = var.web
-# }
+resource "aws_lb_target_group_attachment" "project_lb_tg_attachment" {
+  target_group_arn = aws_lb_target_group.web_group.arn
+  target_id        = var.target_id
+  port             = var.web
+}
 

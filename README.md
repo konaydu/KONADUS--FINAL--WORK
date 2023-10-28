@@ -9,5 +9,3 @@
 - **Kwasi Attafua: https://github.com/Kattafuah**
 - **Michael Kedey: https://github.com/michaelkedey**
 - **Just testing my git knowledge - Kwasi A
-
-0308230823

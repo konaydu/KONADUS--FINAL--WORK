@@ -8,5 +8,4 @@
 - **Gina Tetteh: https://github.com/Gina1010**
 - **Kwasi Attafua: https://github.com/Kattafuah**
 - **Michael Kedey: https://github.com/michaelkedey**
-
-0308230823
+- **Kojo: **

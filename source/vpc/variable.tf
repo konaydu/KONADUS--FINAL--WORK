@@ -210,3 +210,7 @@ variable "lb_action" {
 variable "target_id" {
 }
 
+variable "instance_sg_name"{
+  default = "practice_instance_sg"
+  type = string
+}

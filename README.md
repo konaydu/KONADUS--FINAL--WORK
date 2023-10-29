@@ -11,4 +11,4 @@
 - **Seyram Gabriel: https://github.com/seyramgabriel**
 - **Kojo:**
 - **Habietu://https://github.com/HABIETU-FUSEINI**   
-- - **Michael Kedey: https://github.com/michaelkedey**
+- **Michael Kedey: https://github.com/michaelkedey**

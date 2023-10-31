@@ -1,14 +1,2 @@
-# terraform-practice
-
-#### Date: 26/10/2023
-
-#### Contributors
-- **Doreen Dela Agbedoe: https://github.com/DelaDoreen**
-- **Konadu Owusu-Ansah: https://github.com/konaydu**
-- **Gina Tetteh: https://github.com/Gina1010**
-- **Kwasi Attafua: https://github.com/Kattafuah**
-- **Raymond Lorlornyo Havim://https://github.com/vimray009**
-- **Seyram Gabriel: https://github.com/seyramgabriel**
-- **Kojo:**
-- **Habietu://https://github.com/HABIETU-FUSEINI**   
-- **Michael Kedey: https://github.com/michaelkedey**
+# This assignment was given to me by Jomacs for the completion of their Cloud Engineering Programme. This is a test of me Terraform use, to create  infrasctructures in AWS. I have included a bassh script which will install nginx and other configurations, start nginx and create a proxy server to listen on port 80.
+ 
